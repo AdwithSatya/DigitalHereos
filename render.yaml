@@ -1,10 +1,19 @@
-services:
-  - type: web
-    name: divide-api
-    runtime: python3
-    rootDir: backend
-    buildCommand: pip install -r requirements.txt
-    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
-    envVars:
-      - key: PYTHON_VERSION
-        value: "3.11"
+# Exported from Render on 2026-06-20T13:00:52Z
+version: "1"
+projects:
+- name: My project
+  environments:
+  - name: Production
+    services:
+    - type: web
+      name: DigitalHereos
+      runtime: python
+      repo: https://github.com/AdwithSatya/DigitalHereos
+      plan: free
+      region: oregon
+      buildCommand: pip install -r requirements.txt
+      startCommand: uvicorn main:app --relaod
+      autoDeployTrigger: commit
+      buildFilter:
+        paths:
+        - backend/**
