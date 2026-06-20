@@ -23,3 +23,8 @@ bill-splitter/.env*.local
 # OS
 .DS_Store
 Thumbs.db
+
+# Documentation
+README.md
+bill-splitter/README.md
+

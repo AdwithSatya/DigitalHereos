@@ -11,8 +11,9 @@ projects:
       repo: https://github.com/AdwithSatya/DigitalHereos
       plan: free
       region: oregon
+      rootDir: backend
       buildCommand: pip install -r requirements.txt
-      startCommand: uvicorn main:app --relaod
+      startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
       autoDeployTrigger: commit
       buildFilter:
         paths:
