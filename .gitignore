@@ -24,7 +24,5 @@ bill-splitter/.env*.local
 .DS_Store
 Thumbs.db
 
-# Documentation
-README.md
-bill-splitter/README.md
+
 
